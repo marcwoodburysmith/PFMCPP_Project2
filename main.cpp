@@ -16,8 +16,12 @@ video: Chapter 2 - Part 3
  
  1) Write down the names of the 6 major primitive types available in C++  here:
  
- 
- 
+ int
+ float
+ double
+ bool
+ char
+ unsigned int
  
  
  
@@ -64,10 +68,28 @@ void variableDeclarations()
 {
     //example:
     int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
-    
+
+    int gamesWon = 10;
+    int rank = 10;
+    int numberOfLaps = 2;
+    float height = 155.f;
+    float weight = 75.f;
+    float trackLengthInSeconds = 525.f;
+    double headCircumference = 55.0;
+    double averageWaitTime = 45.5;
+    double averageTimeToComplete = 300.24; 
+    bool hasBlueEyes = true;
+    bool insectFlies = false;
+    bool isAmphibian = false;
+    char input = 'Y';
+    char scienceGrade = 'A';
+    char surnameInitial = 'W';
+    unsigned int counter = 1;
+    unsigned int classSize = 24;
+    unsigned int numPages = 254;
 
     
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(number, gamesWon, rank, numberOfLaps, height, weight, trackLengthInSeconds, headCircumference, averageWaitTime, averageTimeToComplete, hasBlueEyes, insectFlies, isAmphibian, input, scienceGrade, surnameInitial, counter, classSize, numPages); //passing each variable declared to the ignoreUnused() function
 }
 
 /*
@@ -84,42 +106,90 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
+float bodyMassIndex(float height = 175.f, float weight = 75.f)
+ {
+    ignoreUnused(height, weight);
+    return {};
+ }
 
 /*
  2)
  */
+double averageMathScore(double score, int studentID)
+{
+    ignoreUnused(score, studentID);
+    return {};
+}
 
 /*
  3)
  */
+void setGrade(int mark = 60)
+{
+    ignoreUnused(mark);
+}
 
 /*
  4)
  */
+bool insectFlies(bool hasWings = true)
+{
+    ignoreUnused(hasWings);
+    return {};
+}
 
 /*
  5)
  */
+int averageWaitTime(char hospitalCode, char clinicCode, bool isAdult = true)
+{
+    ignoreUnused(hospitalCode, clinicCode, isAdult);
+    return {};
+}
 
 /*
  6)
  */
+void moveChessPiece(char pieceCode = 'P', char coordLetter = 'A', int coordNum = 7)
+{
+    ignoreUnused(pieceCode, coordLetter, coordNum);
+}
 
 /*
  7)
  */
+bool finishedRace(float distTravelled)
+{
+    ignoreUnused(distTravelled);
+    return {};
+}
 
 /*
  8)
  */
+int yearOfBirth(int currentYear = 2022, int ageInYears = 40)
+{
+    ignoreUnused(currentYear, ageInYears);
+    return {};
+}
 
 /*
  9)
  */
+double fahrenheitToCelsius(double fahrenheit = 76)
+{
+    ignoreUnused(fahrenheit);
+    return {};
+}
 
 /*
  10)
  */
+double feetToInches(double feet)
+{
+    ignoreUnused(feet);
+    return {};
+}
 
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
@@ -141,24 +211,25 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-    
+    auto bmi = bodyMassIndex(175.0, 75.0);
     //2)
-    
+    auto averageScore = averageMathScore(80, 1);
     //3)
-    
+    setGrade(80);
     //4)
-    
+    auto batFlies = insectFlies(true);
     //5)
-    
+    auto waitTime = averageWaitTime('C', 'R', true);
     //6)
-    
+    moveChessPiece('P', 'P', 7);
     //7)
-    
+    auto raceComplete = finishedRace(175.5);
     //8)
-    
+    auto yearBorn = yearOfBirth(2022, 1982);
     //9)
-    
+    auto celsius = fahrenheitToCelsius(75.8);
     //10)
+    auto inches = feetToInches(6.5);
     
     
     ignoreUnused(carRented);
