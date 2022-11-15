@@ -106,16 +106,16 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
-float bodyMassIndex(float height = 175.f, float weight = 75.f)
- {
+float calculateBodyMassIndex(float height = 175.f, float weight = 75.f)
+{
     ignoreUnused(height, weight);
     return {};
- }
+}
 
 /*
  2)
  */
-double averageMathScore(double score, int studentID)
+double calculateAverageMathScore(double score, int studentID)
 {
     ignoreUnused(score, studentID);
     return {};
@@ -132,7 +132,7 @@ void setGrade(int mark = 60)
 /*
  4)
  */
-bool insectFlies(bool hasWings = true)
+bool determineWhetherInsectFlies(bool hasWings = true)
 {
     ignoreUnused(hasWings);
     return {};
@@ -141,7 +141,7 @@ bool insectFlies(bool hasWings = true)
 /*
  5)
  */
-int averageWaitTime(char hospitalCode, char clinicCode, bool isAdult = true)
+int calculateAverageWaitTime(char hospitalCode, char clinicCode, bool isAdult = true)
 {
     ignoreUnused(hospitalCode, clinicCode, isAdult);
     return {};
@@ -158,7 +158,7 @@ void moveChessPiece(char pieceCode = 'P', char coordLetter = 'A', int coordNum =
 /*
  7)
  */
-bool finishedRace(float distTravelled)
+bool determineWhetherFinishedRace(float distTravelled)
 {
     ignoreUnused(distTravelled);
     return {};
@@ -167,7 +167,7 @@ bool finishedRace(float distTravelled)
 /*
  8)
  */
-int yearOfBirth(int currentYear = 2022, int ageInYears = 40)
+int calculateYearOfBirth(int currentYear = 2022, int ageInYears = 40)
 {
     ignoreUnused(currentYear, ageInYears);
     return {};
@@ -176,7 +176,7 @@ int yearOfBirth(int currentYear = 2022, int ageInYears = 40)
 /*
  9)
  */
-double fahrenheitToCelsius(double fahrenheit = 76)
+double convertFahrenheitToCelsius(double fahrenheit = 76)
 {
     ignoreUnused(fahrenheit);
     return {};
@@ -185,7 +185,7 @@ double fahrenheitToCelsius(double fahrenheit = 76)
 /*
  10)
  */
-double feetToInches(double feet)
+double convertFeetToInches(double feet)
 {
     ignoreUnused(feet);
     return {};
@@ -211,25 +211,25 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-    auto bmi = bodyMassIndex(175.0, 75.0);
+    auto bmi = calculateBodyMassIndex(175.0, 75.0);
     //2)
-    auto averageScore = averageMathScore(80, 1);
+    auto averageScore = calculateAverageMathScore(80, 1);
     //3)
     setGrade(80);
     //4)
-    auto batFlies = insectFlies(true);
+    auto batFlies = determineWhetherInsectFlies(true);
     //5)
-    auto waitTime = averageWaitTime('C', 'R', true);
+    auto waitTime = calculateAverageWaitTime('C', 'R', true);
     //6)
     moveChessPiece('P', 'P', 7);
     //7)
-    auto raceComplete = finishedRace(175.5);
+    auto raceComplete = determineWhetherFinishedRace(175.5);
     //8)
-    auto yearBorn = yearOfBirth(2022, 1982);
+    auto yearBorn = calculateYearOfBirth(2022, 1982);
     //9)
-    auto celsius = fahrenheitToCelsius(75.8);
+    auto celsius = convertFahrenheitToCelsius(75.8);
     //10)
-    auto inches = feetToInches(6.5);
+    auto inches = convertFeetToInches(6.5);
     
     
     ignoreUnused(carRented);
