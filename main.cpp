@@ -232,7 +232,7 @@ int main()
     auto inches = convertFeetToInches(6.5);
     
     
-    ignoreUnused(carRented);
+    ignoreUnused(carRented, bmi, averageScore, batFlies, waitTime, raceComplete, yearBorn, celsius, inches);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
